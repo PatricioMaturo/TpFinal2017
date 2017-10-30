@@ -23,7 +23,7 @@ class Tarjeta {
     
     public function Saldo() {
 	
-	echo saldo;
+	echo $saldo;
 	
 	return 0;
     }
@@ -31,7 +31,7 @@ class Tarjeta {
 
 	public function viaje(){
 	
-	saldo=saldo - 8.5;
+	$saldo=$saldo - 8.5;
 
 
 }
