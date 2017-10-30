@@ -15,7 +15,7 @@ class Bicicleta {
 
     public function mostrarid ($id) {
     
-    echo $this->id;
+    return $this->id;
     
     }
 }
