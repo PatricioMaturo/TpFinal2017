@@ -1,3 +1,5 @@
+<?php
+
 namespace TpFinal;
 
 Class Colectivo {
@@ -12,7 +14,7 @@ $this->linea=$linea;
 
 public function mostrarlinea {
 
-echo $this->linea;
+return $this->linea;
 }
 
 }
