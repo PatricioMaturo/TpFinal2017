@@ -6,7 +6,10 @@ class Tarjeta {
     protected $saldo; 
     protected $dni;
 
-    
+    public function __construct($dni){
+    $this->saldo = 0;
+    $this->dni = $dni; 
+}
     public function saldo() {
         return $this->saldo;
     }
