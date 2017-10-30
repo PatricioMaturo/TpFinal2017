@@ -14,19 +14,19 @@ class Tarjeta {
         return $this->saldo;
     }
     public function recargar($monto){
-        if($monto==500){
-        $this->saldo = $this->saldo + 640;
+        if($monto==332){
+        $this->saldo = $this->saldo + 388;
         }
         else{
-        if($monto==272){
-        $this->saldo = $this->saldo + 320;
+        if($monto==624){
+        $this->saldo = $this->saldo + 776;
             }
             else{
-            if($monto==320){
-            $this->saldo = $this->saldo + 388;
+            if($monto==10 || $monto==20 || $monto==30 || $monto==50 || $monto==100){
+            $this->saldo = $this->saldo + $monto;
                 }
                 else{
-                $this->saldo = $this->saldo + $monto;
+               echo "Seleccione un monto valido para cargar saldo";
                 }
             }
         }
