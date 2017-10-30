@@ -8,8 +8,6 @@ class Tarjeta {
 
     
     public function saldo() {
-        
-        return 0;
     }
     public function recargar($monto){
         if($monto==500){
