@@ -12,7 +12,7 @@ class Tarjeta {
     protected $diaviaje;
     protected $diaant;
     protected $lineas;
-    portected $lineasant;
+    protected $lineasant;
 
     public function __construct($dni, $tipos){
     $this->saldo = 0;
