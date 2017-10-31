@@ -11,12 +11,15 @@ class Tarjeta {
     protected $horaant;
     protected $diaviaje;
     protected $diaant;
+    protected $lineas;
+    portected $lineasant;
 
     public function __construct($dni, $tipos){
     $this->saldo = 0;
     $this->dni = $dni;
     $this->horaant = 10.91;
     $this->diaant = 32.13;
+    $this->lineasant = 0;
     $this->tipo = $tipos; //LOS TIPOS SON NORMAL, MEDIO BOLETO O BICI, ES PARA HACER LAS FUNCIONES DESPUES
     $this->vplus = 0; //ESTO ES PARA VER CUANTOS VIAJES PLUS LE QUEDAN, SE VA MODIFICANDO CON LAS FUNCIONES, Y VUELVE A 0 CUANDO SE LE CARGA MAS SALDO DE LO QUE SE DEBE
 }
@@ -55,13 +58,16 @@ class Tarjeta {
             }
         }
     }
-    public function pagar($transporte , $hora , $dia){ 
+    public function pagar($transporte, $hora, $dia, $linea){ 
         $this->horaviaje = $hora;
 	$this->diaviaje = $dia;
+	$this->lineas = $linea;
 		if(is_a ($transporte , 'Colectivo') ){
 			if($this->diaviaje == $this->diaant){
 			if($this->horaviaje-$this->horaant<0.30){
+			if($this->lineas != $this->lineasant){
 			$this->trasbordo();
+			}
 			}
 			}
 			else{
@@ -77,6 +83,7 @@ class Tarjeta {
     	}
 	    $this->horaant = $this->horaviaje;
 	    $this->diaant = $this->diaviaje;
+	    $this->lineasant = $this->lineas;
     }
     public function normal(){
     if($this->saldo < 9.70){
