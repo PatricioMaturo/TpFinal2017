@@ -56,9 +56,7 @@ class Tarjeta {
         }
         
     }
-    public function viajesRealizados(){
-	    //COMPLETARR
-    }
+    
     public function pagar($transporte , $hora , $dia){ 
         $this->horaviaje = $hora;
 	$this->diaviaje = $dia;
@@ -127,8 +125,19 @@ class Tarjeta {
         
     }
     public function bici(){
-	    if($this->diaviaje==$this->diaant
-	       //COMPLETARRRR
+	    if($this->diaviaje!=$this->diaant){
+	    	if($this->saldo > 14.55){
+		    $this->saldo = $this->saldo - 14.55;
+			echo "Retire su bicicleta";
+		}
+		    else{
+		    echo "Su saldo es insuficiente";
+		    }
+	    }
+	    else{
+	    echo "Retire su bicileta";
+	    }
+	       
     }
 
 
