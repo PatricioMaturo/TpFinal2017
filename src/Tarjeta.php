@@ -63,12 +63,8 @@ class Tarjeta {
 	$this->diaviaje = $dia;
 	$this->lineas = $linea;
 		if($transporte == "Colectivo"){
-			if($this->diaviaje == $this->diaant){
-			if(($this->horaviaje-$this->horaant)<0.30){
-			if($this->lineas != $this->lineasant){
+			if($this->diaviaje == $this->diaant && ($this->horaviaje-$this->horaant)<0.30 && $this->lineas != $this->lineasant){
 			$this->trasbordo();
-			}
-			}
 			}
 			else{
 	if( $this->tipo == "Normal" ){
