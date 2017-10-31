@@ -11,7 +11,7 @@ class Tarjeta {
     protected $horaant;
     protected $diaviaje;
     protected $diaant;
-    protected $lineas;
+    public $lineas; //test
     protected $lineasant;
 
     public function __construct($dni, $tipos){
