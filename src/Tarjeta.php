@@ -74,7 +74,7 @@ class Tarjeta {
                 $this->medio(); 
        }   
 		}
-        if(is_a ($transporte , 'Bicicleta') ){
+        if($transporte == "Bicicleta"){
 		        $this->bici();
     	}
 	    $this->horaant = $this->horaviaje;
