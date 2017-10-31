@@ -12,7 +12,7 @@ $this->linea=$linea;
 }
 
 
-public function mostrarlinea {
+public function mostrarlinea() {
 
 return $this->linea;
 }
