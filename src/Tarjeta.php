@@ -7,6 +7,7 @@ class Tarjeta {
     protected $dni;
     protected $tipo;
     protected $vplus;
+    protected $fechaviaje;
 
     public function __construct($dni, $tipos){
     $this->saldo = 0;
@@ -52,11 +53,23 @@ class Tarjeta {
     }
     public function viajesRealizados(){
     }
-    public function pagar(Transporte $transporte, $fecha_y_hora){
+    public function pagar(Transporte $transporte, $fecha_y_hora){ 
         
         //ACA VA LA FUNCION PARA DETERMINAR CUAL FUNCION DE LAS DE ABAJO ES LA QUE SUCEDE
         //LO HACEMOS VIENDO EL TIPO DE TARJETA QUE TIENE LA PERSONA (MEDIO, NORMAL, BICI)
-    }
+		
+		if( $this->tipo == "Normal" ){
+                $this->normal();
+        	}
+        if( $this->tipo == "MedioBoleto" ){
+                $this->medio(); 
+       }   
+        if(is_a ($transporte , 'Colectivo') ){
+		        $this->fechaviaje = new DateTime ();
+        }
+        if((is_a ($transporte , 'Bicicleta') ){
+		        $this->viajeBici();
+    	}
     public function normal(){
     if($this->saldo < 9.70){
         $this->plus();
@@ -82,8 +95,10 @@ class Tarjeta {
         }
     }
     public function trasbordo(){
+        
+        
     }
-    public function bici()´{
+    public function bici(){
     }
 
 
