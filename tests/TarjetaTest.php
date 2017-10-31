@@ -53,7 +53,7 @@ class TestTarjeta extends TestCase {
 	public function trasbordox1viajesx2(){
 		$tar1 = new Tarjeta (22345678, "Normal");
 		$K = new Colectivo( "K" );
-		$colectivo153 = new Colectivo( "153" )
+		$colectivo153 = new Colectivo( "153" );
 		$tar1->recargar(50);
 		$tar1->pagar("Colectivo", 13.45, 14.10, $K);
 		$tar1->pagar("Colectivo", 14.00, 14.10, $colectivo153);
