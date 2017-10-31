@@ -29,15 +29,14 @@ class TestTarjeta extends TestCase {
     	public function testviaje() {
 	 	$roja144 = new Colectivo ( "144 roja" );
 	 	$tarjeta332->pagar($roja144, 13.45, 14.10, $roja144);
-	 	$this->assertEquals( $tarjeta332->saldo(), (388-9.70) );
-    
-    }
+	 	$this->assertEquals($tarjeta332->saldo(), (388-9.70));
+     }
     
     
 	public function testviajex2() {
 	    	$tarjeta50->pagar("Colectivo", 13.45, 14.10, $roja144);
 	    	$tarjeta50->pagar("Colectivo", 13.45, 14.10, $roja144);
-	    	$this->assertEquals( $tarjeta50->saldo(), (50-9.70-9.70) );
+	    	$this->assertEquals( $tarjeta50->saldo(), (50-9.70-9.70));
     }
     
     
@@ -46,7 +45,7 @@ class TestTarjeta extends TestCase {
 		$tarjeta->recargar(50);
 	    	$tarjeta->pagar("Colectivo", 13.35, 14.10, "$144roja");
 		$tarjeta->pagar("Colectivo", 14.00, 14.10, "Q");
-	    	$this->assertEquals( $tarjeta->saldo(), ((50-9.70)-3.20) );
+	    	$this->assertEquals( $tarjeta->saldo(), ((50-9.70)-3.20));
         
     }
         
