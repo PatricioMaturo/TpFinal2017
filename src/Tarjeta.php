@@ -57,14 +57,12 @@ class Tarjeta {
         
     }
     public function viajesRealizados(){
+	    //COMPLETARR
     }
     public function pagar($transporte , $hora , $dia){ 
-        
-        //ACA VA LA FUNCION PARA DETERMINAR CUAL FUNCION DE LAS DE ABAJO ES LA QUE SUCEDE
-        //LO HACEMOS VIENDO EL TIPO DE TARJETA QUE TIENE LA PERSONA (MEDIO, NORMAL, BICI)
+        $this->horaviaje = $hora;
+	$this->diaviaje = $dia;
 		if(is_a ($transporte , 'Colectivo') ){
-		        $this->horaviaje = $hora;
-			$this->diaviaje = $dia;
 			if($this->diaviaje == $this->diaant){
 			if($this->horaviaje-$this->horaant<0.30){
 			$this->trasbordo();
@@ -80,7 +78,7 @@ class Tarjeta {
 		}
 	   
         if(is_a ($transporte , 'Bicicleta') ){
-		        $this->viajeBici();
+		        $this->bici();
     	}
 	    $this->horaant = $this->horaviaje;
 	    $this->diaant = $this->diaviaje;
@@ -129,6 +127,8 @@ class Tarjeta {
         
     }
     public function bici(){
+	    if($this->diaviaje==$this->diaant
+	       //COMPLETARRRR
     }
 
 
