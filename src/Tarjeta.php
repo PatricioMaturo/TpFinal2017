@@ -62,7 +62,7 @@ class Tarjeta {
         $this->horaviaje = $hora;
 	$this->diaviaje = $dia;
 	$this->lineas = $linea;
-		if(is_a ($transporte , 'TpFinal\Colectivo') ){
+		if($transporte == "Colectivo"){
 			if($this->diaviaje == $this->diaant){
 			if(($this->horaviaje-$this->horaant)<0.30){
 			if($this->lineas != $this->lineasant){
