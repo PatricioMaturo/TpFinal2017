@@ -51,7 +51,7 @@ class TestTarjeta extends TestCase {
 		$tarjet = new Tarjeta(41559067,"Normal");
 		$tarjet->recargar(50);
 	    	$tarjet->pagar("Colectivo", 13.35, 14.10, $roja144);
-		$tarjet->pagar("Colectivo", 14.00, 14.10, $Q);
+		$tarjet->pagar("Colectivo", 13.49, 14.10, $Q);
 	    	$this->assertEquals( $tarjet->saldo(), ((50-9.70)-3.20));
         
     }
