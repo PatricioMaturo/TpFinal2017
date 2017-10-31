@@ -70,7 +70,7 @@ class TestTarjeta extends TestCase {
 		$bici = new Bicicleta(2345);
 		$tar2->recargar(332);
 		$tar2->pagar("Bicicleta", 13.45, 14.10, "bici");
-		$this->assertEquals( $tarjeta->saldo(), 388-14.55 );
+		$this->assertEquals( $tar2->saldo(), 388-14.55 );
 	
 	}
 	    
