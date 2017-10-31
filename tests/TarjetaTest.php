@@ -45,6 +45,7 @@ class TestTarjeta extends TestCase {
     
     
     	public function testViajeTransbordo() {
+		$roja144 = new Colectivo ( "144 roja" );
         	$Q = new Colectivo ( "Q" );
 		$tarjet = new Tarjeta(41559067,"Normal");
 		$tarjet->recargar(50);
