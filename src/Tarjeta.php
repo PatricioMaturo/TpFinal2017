@@ -56,6 +56,18 @@ class Tarjeta {
         
         //ACA VA LA FUNCION PARA DETERMINAR CUAL FUNCION DE LAS DE ABAJO ES LA QUE SUCEDE
         //LO HACEMOS VIENDO EL TIPO DE TARJETA QUE TIENE LA PERSONA (MEDIO, NORMAL, BICI)
+        if( $this->tipo == "Normal" ){
+ +                $this->normal();
+ +        	}
+ +        if( $this->tipo == "MedioBoleto" ){
+ +                $this->medio(); 
+ +       }   
+ +        if(is_a ($transporte , 'Colectivo') ){
+ +		        $this->fechaviaje = new DateTime ();
+ +        }
+ +        if((is_a ($transporte , 'Bicicleta') ){
+ +		        $this->viajeBici();
+ +    	}
     }
     public function normal(){
     if($this->saldo < 9.70){
