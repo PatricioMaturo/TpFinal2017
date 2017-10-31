@@ -54,9 +54,7 @@ class Tarjeta {
                 }
             }
         }
-        
     }
-    
     public function pagar($transporte , $hora , $dia){ 
         $this->horaviaje = $hora;
 	$this->diaviaje = $dia;
@@ -74,7 +72,6 @@ class Tarjeta {
                 $this->medio(); 
        }   
 		}
-	   
         if(is_a ($transporte , 'Bicicleta') ){
 		        $this->bici();
     	}
@@ -122,7 +119,6 @@ class Tarjeta {
 		$this->saldo = $this->saldo - 3.20;
 		}
 	    }
-        
     }
     public function bici(){
 	    if($this->diaviaje!=$this->diaant){
@@ -137,8 +133,5 @@ class Tarjeta {
 	    else{
 	    echo "Retire su bicileta";
 	    }
-	       
     }
-
-
 }
