@@ -34,6 +34,7 @@ class TestTarjeta extends TestCase {
     
     
 	public function testviajex2() {
+		$roja144 = new Colectivo ( "144 roja" );
 		$tarjeta50 = new Tarjeta(23456789, "Normal");
 	    	$tarjeta50->pagar("Colectivo", 13.45, 14.10, $roja144);
 	    	$tarjeta50->pagar("Colectivo", 13.45, 14.10, $roja144);
