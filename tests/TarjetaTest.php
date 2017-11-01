@@ -71,7 +71,7 @@ class TestTarjeta extends TestCase {
 	    
 	    
 	public function testbici(){
-		$tar2 = new Tarjeta(34567890, "Normal");
+		$tar2 = new Tarjeta(34567890, "bici");
 		$bici = new Bicicleta(2345);
 		$tar2->recargar(332);
 		$tar2->pagar("Bicicleta", 13.45, 14.10, "bici");
