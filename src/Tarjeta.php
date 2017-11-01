@@ -128,7 +128,6 @@ class Tarjeta {
 	    if($this->diaviaje!=$this->diaant){
 	    	if($this->saldo > 14.55){
 		    $this->saldo = $this->saldo - 14.55;
-			echo "Retire su bicicleta";
 		}
 		    else{
 		    echo "Su saldo es insuficiente";
