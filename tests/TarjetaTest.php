@@ -108,7 +108,7 @@ class TestTarjeta extends TestCase {
 		$Tar->pagar("Colectivo",13.45, 14.11,$colectivo120);
 		$Tar->pagar("Colectivo",13.45, 14.11,$colectivo120);
 		$Tar->pagar("Colectivo",13.45, 14.11,$colectivo120);
-		$this->assertEquals( $Tar->plus, 1 );
+		$this->assertEquals( $Tar->vplus, 1 );
 	
 	
 	}
