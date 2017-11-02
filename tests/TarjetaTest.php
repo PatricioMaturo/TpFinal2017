@@ -100,7 +100,7 @@ class TestTarjeta extends TestCase {
 	}
 	    
 	
-	public function test vplus(){
+	public function testvplus(){
 	
 		$Tar = new Tarjeta(23567890, "MedioBoleto");
 		$Tar = recargar(10);
