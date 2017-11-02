@@ -1,7 +1,5 @@
 <?php
-
 namespace TpFinal;
-
 class Tarjeta {
     protected $saldo; 
     protected $dni;
@@ -13,7 +11,6 @@ class Tarjeta {
     protected $diaant;
     public $lineas; //test
     protected $lineasant;
-
     public function __construct($dni, $tipos){
     $this->saldo = 0;
     $this->dni = $dni;
@@ -73,13 +70,18 @@ class Tarjeta {
         if( $this->tipo == "MedioBoleto" ){
                 $this->medio(); 
        }   
-		}	
+		}
+			
+				
         if($this->tipo == "bici"){
 		        $this->bici();
     	}
+			
 	    $this->horaant = $this->horaviaje;
 	    $this->diaant = $this->diaviaje;
 	    $this->lineasant = $this->lineas;
+    }
+    
     }
     public function normal(){
     if($this->saldo < 9.70){
@@ -123,17 +125,19 @@ class Tarjeta {
 		}
 	    }
     }
+	
     public function bici(){
 	    if($this->diaviaje != $this->diaant){
 	    if($this->saldo > 14.55){
 	    $this->saldo = $this->saldo - 14.55;
 	    }
 		    else{
-		    echo "saldo insuficiente";
+		    print "saldo insuficiente";
 		    }
 	    }
 	    else{
-	    echo "retire su bicicleta";
-	    }	    
+	    print "retire su bicicleta";
+	    }
+		    
     }
 }
