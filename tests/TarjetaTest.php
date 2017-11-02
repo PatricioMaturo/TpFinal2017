@@ -103,11 +103,11 @@ class TestTarjeta extends TestCase {
 	public function testvplus(){
 	
 		$Tar = new Tarjeta(23567890, "MedioBoleto");
-		$Tar = recargar(10);
+		$Tar->recargar(10);
 		$colectivo120 = new Colectivo( "120" );
-		$Tar = pagar("Colectivo",13.45, 14.11,$colectivo120);
-		$Tar = pagar("Colectivo",13.45, 14.11,$colectivo120);
-		$Tar = pagar("Colectivo",13.45, 14.11,$colectivo120);
+		$Tar->pagar("Colectivo",13.45, 14.11,$colectivo120);
+		$Tar->pagar("Colectivo",13.45, 14.11,$colectivo120);
+		$Tar->pagar("Colectivo",13.45, 14.11,$colectivo120);
 		$this->assertEquals( $Tar->plus, 1 );
 	
 	
