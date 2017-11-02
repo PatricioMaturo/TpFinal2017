@@ -79,11 +79,12 @@ class Tarjeta {
         if($this->tipo == "bici"){
 		        $this->bici();
     	}
+			}
 	    $this->horaant = $this->horaviaje;
 	    $this->diaant = $this->diaviaje;
 	    $this->lineasant = $this->lineas;
     }
-    }
+    
     }
     public function normal(){
     if($this->saldo < 9.70){
