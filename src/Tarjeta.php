@@ -127,6 +127,7 @@ class Tarjeta {
 		}
 	    }
     }
+	
     public function bici(){
 	    if($this->diaviaje != $this->diaant){
 	    if($this->saldo > 14.55){
