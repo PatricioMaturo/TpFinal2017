@@ -26,6 +26,14 @@ class TestTarjeta extends TestCase {
     
     	}
     
+	
+	public function test624(){
+    
+        	$tarjeta624 = new Tarjeta(41559067,"Normal");
+        	$tarjeta624->recargar(624);
+		$this->assertEquals($tarjeta624->saldo(),776);
+    
+    	}
     	public function testviaje() {
 	 	$roja144 = new Colectivo ( "144 roja" );
 		$tarjeta3 = new Tarjeta(41559067,"Normal");
