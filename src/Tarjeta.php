@@ -129,12 +129,5 @@ class Tarjeta {
 	    	
 		    $this->saldo = $this->saldo - 14.55;
 	    }
-		    else{
-		   echo "su saldo es insuficiente";
-		    }
-	    
-	    else{
-	    echo "Retire su bicileta";
-	    }
     }
 }
