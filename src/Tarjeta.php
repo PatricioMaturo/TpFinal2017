@@ -85,7 +85,7 @@ class Tarjeta {
 	    $this->lineasant = $this->lineas;
     }
     
-    }
+    
     public function normal(){
     if($this->saldo < 9.70){
         $this->plus();
