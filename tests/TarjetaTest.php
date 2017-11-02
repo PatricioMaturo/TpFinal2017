@@ -74,7 +74,7 @@ class TestTarjeta extends TestCase {
 		$tar1->pagar("Colectivo", 13.45, 14.10, $K);
 		$tar1->pagar("Colectivo", 14.00, 14.10, $colectivo153);
 		$tar1->pagar("Colectivo", 14.00, 14.10, $colectivo153);
-	
+		$this->assertEquals( $tar1->saldo(), ((388-9.70)-3.20)-9.70 );
 	
 	}
 	    
@@ -87,9 +87,31 @@ class TestTarjeta extends TestCase {
 		$this->assertEquals( $tar2->saldo(), 388-14.55 );
 	
 	}
+	
+	public function testbicix2(){
+		$tar3 = new Tarjeta(34567890, "bici");
+		$bici = new Bicicleta(2345);
+		$bici = new Bicicleta(7890);
+		$tar3->recargar(332);
+		$tar3->pagar("Bicicleta", 13.45, 14.11, "bici");
+		$tar3->pagar("Bicicleta", 15.30, 14.11, "bici");
+		$this->assertEquals( $tar2->saldo(), 388-14.55 );
+	
+	}
 	    
 	
+	public function test vplus(){
 	
+		$Tar = new Tarjeta(23567890, "MedioBoleto");
+		$Tar = recargar(10);
+		$colectivo120 = new Colectivo( "120" );
+		$Tar = pagar("Colectivo",13.45, 14.11,$colectivo120);
+		$Tar = pagar("Colectivo",13.45, 14.11,$colectivo120);
+		$Tar = pagar("Colectivo",13.45, 14.11,$colectivo120);
+		$this->assertEquals( $Tar->plus, 1 );
+	
+	
+	}
 }
 	    
 	    
