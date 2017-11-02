@@ -74,7 +74,7 @@ class TestTarjeta extends TestCase {
 		$tar2 = new Tarjeta(34567890, "bici");
 		$bici = new Bicicleta(2345);
 		$tar2->recargar(332);
-		$tar2->pagar("Bicicleta", 13.45, 14.10, "bici");
+		$tar2->pagar("Bicicleta", 13.45, 14.11, "bici");
 		$this->assertEquals( $tar2->saldo(), 388-14.55 );
 	
 	}
