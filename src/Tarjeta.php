@@ -72,7 +72,7 @@ class Tarjeta {
        }   
 		}
 			
-				
+		}	
         if($this->tipo == "bici"){
 		        $this->bici();
     	}
@@ -80,7 +80,6 @@ class Tarjeta {
 	    $this->horaant = $this->horaviaje;
 	    $this->diaant = $this->diaviaje;
 	    $this->lineasant = $this->lineas;
-    }
     
     }
     public function normal(){
