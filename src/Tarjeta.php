@@ -4,7 +4,7 @@ class Tarjeta {
     protected $saldo; 
     protected $dni;
     protected $tipo;
-    protected $vplus;
+    public $vplus; //test
     protected $horaviaje;
     protected $horaant;
     protected $diaviaje;
