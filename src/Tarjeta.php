@@ -125,9 +125,17 @@ class Tarjeta {
 	    }
     }
     public function bici(){
-	    if($this->diaviaje != $this->diaant && $this->saldo > 14.55){
-	    	
-		    $this->saldo = $this->saldo - 14.55;
+	    if($this->diaviaje != $this->diaant){
+	    if($this->saldo > 14.55){
+	    $this->saldo = $this->saldo - 14.55;
 	    }
+		    else{
+		    print "saldo insuficiente";
+		    }
+	    }
+	    else{
+	    print "retire su bicicleta";
+	    }
+		    
     }
 }
