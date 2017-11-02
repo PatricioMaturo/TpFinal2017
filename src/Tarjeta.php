@@ -3,16 +3,16 @@
 namespace TpFinal;
 
 class Tarjeta {
-    public $saldo; 
-    public $dni;
-    public $tipo;
-    public $vplus;
-    public $horaviaje;
-    public $horaant;
-    public $diaviaje;
-    public $diaant;
+    protected $saldo; 
+    protected $dni;
+    protected $tipo;
+    protected $vplus;
+    protected $horaviaje;
+    protected $horaant;
+    protected $diaviaje;
+    protected $diaant;
     public $lineas; //test
-    public $lineasant;
+    protected $lineasant;
 
     public function __construct($dni, $tipos){
     $this->saldo = 0;
