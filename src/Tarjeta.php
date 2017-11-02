@@ -73,19 +73,14 @@ class Tarjeta {
         if( $this->tipo == "MedioBoleto" ){
                 $this->medio(); 
        }   
-		}
-			
-				
+		}	
         if($this->tipo == "bici"){
 		        $this->bici();
     	}
-			
 	    $this->horaant = $this->horaviaje;
 	    $this->diaant = $this->diaviaje;
 	    $this->lineasant = $this->lineas;
     }
-    
-    
     public function normal(){
     if($this->saldo < 9.70){
         $this->plus();
@@ -128,7 +123,6 @@ class Tarjeta {
 		}
 	    }
     }
-	
     public function bici(){
 	    if($this->diaviaje != $this->diaant){
 	    if($this->saldo > 14.55){
@@ -140,7 +134,6 @@ class Tarjeta {
 	    }
 	    else{
 	    echo "retire su bicicleta";
-	    }
-		    
+	    }	    
     }
 }
