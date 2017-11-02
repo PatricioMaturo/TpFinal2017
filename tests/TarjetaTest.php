@@ -95,7 +95,7 @@ class TestTarjeta extends TestCase {
 		$tar3->recargar(332);
 		$tar3->pagar("Bicicleta", 13.45, 14.11, "bici");
 		$tar3->pagar("Bicicleta", 15.30, 14.11, "bici");
-		$this->assertEquals( $tar2->saldo(), 388-14.55 );
+		$this->assertEquals( $tar3->saldo(), 388-14.55 );
 	
 	}
 	    
