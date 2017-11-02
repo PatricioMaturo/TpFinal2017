@@ -135,11 +135,11 @@ class Tarjeta {
 	    $this->saldo = $this->saldo - 14.55;
 	    }
 		    else{
-		    print "saldo insuficiente";
+		    echo "saldo insuficiente";
 		    }
 	    }
 	    else{
-	    print "retire su bicicleta";
+	    echo "retire su bicicleta";
 	    }
 		    
     }
